@@ -1,0 +1,86 @@
+using UnityEngine.SceneManagement;
+using UnityEngine;
+
+
+public enum GameType { Campaign, Endurance, None }
+
+public class GameManagerScript : MonoBehaviour
+{
+    private static GameManagerScript _instance;
+    public static GameManagerScript Instance { get { return _instance; } }
+
+    public static GameType gameType;
+    
+
+    private void Awake()
+    {
+        if (_instance != null && Instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+        DontDestroyOnLoad(this.gameObject);
+
+    }
+
+
+    public void SetCampaign()
+    {
+        //if(EditorUtility.DisplayDialog("Start a New Campaign?", "Do you wish to start a new campaign and overwrite your old one?", "Yes", "No"))
+        //{
+        gameType = GameType.Campaign;
+        SaveSystem.DeletePlayer();
+        SceneManager.LoadScene("Game Scene");
+        
+        //}
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1f;
+        gameType = GameType.Campaign;
+        PlayerData data = SaveSystem.LoadPlayer();
+        SceneManager.LoadScene("Game Scene");
+        SceneControllerScript.Instance.SetLevel(data.level);
+        SceneControllerScript.Instance.SetScore(data.score);
+    }
+
+    public void SetEndurance()
+    {
+        Time.timeScale = 1f;
+        gameType = GameType.Endurance;
+        SceneManager.LoadScene("Game Scene");
+    }
+
+    //Give the user the option to retry Endurance mode or end the game
+    public void LoseGame(int level, int score)
+    {
+        Time.timeScale = 0f;
+    }
+
+    //When user loses at Endurance mode and decides not to continue
+    public void EndGame()
+    {
+        Time.timeScale = 1f;
+        ReturnToMenu();
+    }
+
+    public void HighScores()
+    {
+
+    }
+
+    public void ReturnToMenu()
+    {
+        gameType = GameType.None;
+        SceneManager.LoadScene("Main Menu");
+    }
+
+    public GameType GetGameType()
+    {
+        return gameType;
+    }
+}

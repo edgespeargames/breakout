@@ -1,0 +1,32 @@
+Level  Reds  Oranges  TotalRows  row to change
+
+
+1	1
+2	2
+3	3
+4	4
+5	5
+6	6
+
+7	5	1	6	totalrows-1
+8	4	2	6	totalrows-2
+9	3	3	6	totalrows-3
+10	2	4	6
+11	1	5	6
+12	0	6	6
+13	0	5	6
+14	0	4	6
+15	0	3	6
+16	0	2	6
+17	0	1	6
+18	0	0	6
+
+lvl 7
+red 5 = lvl 7 - 2
+lvl - 6 * 2 = 2
+lvl 8
+red 4 = lvl 8 - 4  
+lvl - 6 * 2
+lvl 9
+red 3 = lvl 9 - 6  
+lvl - 6 * 2

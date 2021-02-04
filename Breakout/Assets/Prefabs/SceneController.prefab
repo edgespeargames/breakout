@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3136605643457971710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2237938314375079493}
+  - component: {fileID: 1907776332}
+  - component: {fileID: 1907776333}
+  - component: {fileID: 864483870}
+  m_Layer: 0
+  m_Name: SceneController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2237938314375079493
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3136605643457971710}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1907776332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3136605643457971710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f89eaaa3ad5e9b048acbd72bdec708e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 8211795830954206289, guid: f58a7b00b255cb24fb159095078c7579, type: 3}
+  paddle: {fileID: 7695466610961264545, guid: c3d940cad457ad4499f60ca5c752c369, type: 3}
+  score: 0
+  lives: 0
+  maxLives: 3
+  countdown: 0
+  multCountdown: 0
+  explosion: {fileID: 2273624021988987612, guid: 10e3bc1ce9a8db94590df1f7b66b9f94,
+    type: 3}
+  powerUpList: []
+  scoreText: {fileID: 0}
+  levelText: {fileID: 0}
+  life1: {fileID: 0}
+  life2: {fileID: 0}
+  life3: {fileID: 0}
+--- !u!114 &1907776333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3136605643457971710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1a263a9f489c34da95e54afd4c6cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  brick: {fileID: 837668503892999312, guid: 98558689eca33f94fa30a685bf2f7fe1, type: 3}
+  bricks:
+  - {fileID: 837668503892999312, guid: 98558689eca33f94fa30a685bf2f7fe1, type: 3}
+  - {fileID: 9084859861814473282, guid: 5360af8923f1ab24ab6efa54b9ef2e69, type: 3}
+  - {fileID: 137798990580269814, guid: 518bf3d9ee9c15c47bbcb3c42f6f9ba9, type: 3}
+  - {fileID: 3913964334358239515, guid: 5703d89d10f92a64db56555ebdaf488e, type: 3}
+  - {fileID: 5901617755436098158, guid: 2a2ef8c7e2cbaeb4cbb57e2841cdfde9, type: 3}
+  - {fileID: 7550468823965255565, guid: 488df0764d17eeb4f96b42ac5accf1af, type: 3}
+  brickList: []
+--- !u!114 &864483870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3136605643457971710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee798e1d3a9979440868b6543f10e548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceMat: {fileID: 6200000, guid: 93814189474a81f43b90e8b2d91da423, type: 2}
+  anchor: {fileID: 0}
